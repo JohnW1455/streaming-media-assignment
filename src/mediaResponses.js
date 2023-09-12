@@ -1,10 +1,6 @@
 const fs = require('fs'); // pull in the file system module
 const path = require('path');
 
-const getParty = (request, response) => loadMedia(request, response, '../client/party.mp4', 'video/mp4');
-const getBling = (request, response) => loadMedia(request, response, '../client/bling.mp3', 'audio/mpeg');
-const getBird = (request, response) => loadMedia(request, response, '../client/bird.mp4', 'video/mp4');
-
 const loadMedia = (request, response, url, contentType) => {
   const file = path.resolve(__dirname, url);
 
@@ -52,6 +48,10 @@ const loadMedia = (request, response, url, contentType) => {
   });
 };
 
+const getParty = (request, response) => loadMedia(request, response, '../client/party.mp4', 'video/mp4');
+const getBling = (request, response) => loadMedia(request, response, '../client/bling.mp3', 'audio/mpeg');
+const getBird = (request, response) => loadMedia(request, response, '../client/bird.mp4', 'video/mp4');
+
 module.exports = {
-    getParty, getBling, getBird,
-}
+  getParty, getBling, getBird,
+};

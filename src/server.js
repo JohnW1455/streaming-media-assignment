@@ -15,8 +15,8 @@ const onRequest = (request, response) => {
       htmlHandler.getPage2(request, response);
       break;
     case '/page3':
-        htmlHandler.getPage3(request, response);
-        break;
+      htmlHandler.getPage3(request, response);
+      break;
     case '/party.mp4':
       mediaHandler.getParty(request, response);
       break;
@@ -24,8 +24,8 @@ const onRequest = (request, response) => {
       mediaHandler.getBling(request, response);
       break;
     case '/bird.mp4':
-        mediaHandler.getBird(request, response);
-        break;
+      mediaHandler.getBird(request, response);
+      break;
     default:
       htmlHandler.getIndex(request, response);
       break;
